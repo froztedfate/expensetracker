@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Field Agent Details</title>
+    <link rel="stylesheet" href="style2.css">
+  </head>
+  <body>
+    <form class="signup-form" action="/register" method="post">
+
+      <!-- form header -->
+      <div class="form-header">
+        <h1>Enter Claim details</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+	<div class="horizontal-group">
+		<div class="form-group center">
+			<label for="date" class="label-title">                                               Enter spcific date                                 </label>
+        		<input type="date" id="birthday" name="date">
+        	</div>
+
+
+        <!-- Field Agent Details -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">Vendor name *</label>
+            <input type="text" id="firstname" class="form-input" placeholder="enter vendor name" required="required" />
+          </div>
+
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name</label>
+            <input type="text" id="lastname" class="form-input" placeholder="enter your last name" />
+          </div>
+
+          <div class="form-group right">
+            <label for="experience" class="label-title">Amount</label>
+            <input type="range" min="20" max="100" step="5"  value="0" id="experience" class="form-input" onChange="change();" 			style="height:28px;width:78%;padding:0;">
+            <span id="range-label" style="color:black">50K</span>
+          </div>
+
+        <!-- Gender and Hobbies -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Gender:</label>
+            <div class="input-group">
+              <label for="male"><input type="radio" name="gender" value="male" id="male"> Male</label>
+              <label for="female"><input type="radio" name="gender" value="female" id="female"> Female</label>
+            </div>
+          </div>
+
+
+        </div>
+
+	<div class="horizontal-group">
+		<div class="form-group-left">
+			<label class="label-title">Select Expense Category</label>
+			<div class="input-group">
+				<div class="dropdown">
+
+  					<div class="dropdown-content">
+
+    						<option><input type="checkbox">Travel</option>
+    						<option><input type="checkbox">Printing</option>
+    						<option><input type="checkbox">Stationery</option>
+    						<option><input type="checkbox">Utility</option>    			    							<option><input type="checkbox">Refreshment</option>
+    						<option><input type="checkbox">House Keeping</option>    							<option><input type="checkbox">Courier</option>
+    						<option><input type="checkbox">Internet Bills</option>
+    						<option><input type="checkbox">Accomodation</option>
+    						<option><input type="checkbox">Stationery</option>
+    						<option><input type="checkbox">Uility</option>    			    							<option><input type="checkbox">Refreshment</option>
+    						<option><input type="checkbox">House Keeping</option>
+
+
+
+  					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+        <br>
+        <!-- Profile picture and Age -->
+        <div class="horizontal-group">
+          <div class="form-group left" >
+            <label for="choose-file" class="label-title">Upload Bills</label>
+            <input type="file" id="choose-file" size="80">
+          </div>
+         <br><br><br>
+    	<div>
+        <!-- Bio -->
+        <div class="form-group">
+        <br>
+          <label for="choose-file" class="label-title">Comments</label>
+          <textarea class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+        </div>
+      </div>
+      </div>
+
+      <!-- form-footer -->
+      <div class="form-footer">
+
+        <button type="submit" class="btn">Submit</button>
+      </div>
+
+    </form>
+
+    <!-- Script for range input label -->
+    <script>
+      var rangeLabel = document.getElementById("range-label");
+      var experience = document.getElementById("experience");
+
+      function change() {
+      rangeLabel.innerText = experience.value + "K";
+      }
+    </script>
+
+  </body>
+</html>
